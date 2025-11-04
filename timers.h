@@ -31,10 +31,14 @@ typedef struct {
             volatile uint8_t *compareL;
         };
     };
+    
+    uint16_t prescaler;
+    uint32_t baseClk;
 
-    void (*timerBegin)(void);
-    void (*timerInit)(void);
+    void (*timerBegin)(void); //user defined
+    void (*timerInit)(void);  //user defined
 } timerdev16_t;
+
 
 
 #endif
